@@ -1,0 +1,29 @@
+/*Exercício 3. Faça um algoritmo que leia a idade de uma pessoa em anos, meses e dias e mostre-a expressa em dias. 
+(Nota: considere todos os anos com 365 dias e todos os meses com 30 dias). 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    
+     //Declaração de variáveis
+    int anos, meses, dias, t1, t2, idade;
+
+    //Entrada de dados
+    Console.WriteLine ("Por favor, digite quantos anos você tem:");
+    anos = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Por favor, digite quantos meses se passaram desde o seu último aniversário: ");
+    meses = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Por favor, digite quantos dias faltam para o seu aniversário: ");
+    dias = int.Parse(Console.ReadLine());
+
+    //Processamento dos dados
+    t1 = anos * 365;
+    t2 = meses * 30;
+    idade = t1 + t2 + dias;
+
+    //Saída da informação
+    Console.WriteLine ("Sua idade em dias é = " + idade);
+    
+  }
+}
