@@ -1,0 +1,29 @@
+/*5) Faça um programa para imprimir a raiz quadrada de um número (lido do teclado) caso ele seja positivo e o quadrado do número, caso ele seja negativo. */
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float num, n;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite um número: ");
+    num = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados e saída da informação
+    if(num > 0){
+      n = (float)Math.Sqrt(num);
+      Console.WriteLine ("A raiz quadrada de " + num + " é = " + n);
+    }
+
+    else if(num < 0){
+      n = num * num;
+      Console.WriteLine ("O quadrado de " + num + " é = " + n);
+    }
+    
+    else{
+       Console.WriteLine ("O número digitado é 0");
+    }
+  }
+}
