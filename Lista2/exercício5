@@ -1,0 +1,41 @@
+/*Exercício 5. Suponha que você foi ao supermercado e comprou: N latas de chocolate em pó a um custo unitário Q, L
+litros de leite a um custo unitário P e B quilos de banana a um custo unitário T. Faça um programa que
+escreva: o nome do produto, total gasto com cada produto e total gasto no mercado.
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {  
+    
+    //Declaração de variáveis
+    int chocolate;
+    float leite, banana, custoC, custoL, custoB, totalC, totalL, totalB, totalM;
+
+    //Entrada de dados e processamento dos dados
+    Console.WriteLine ("Digite quantas latas de chocolate em pó você comprou: ");
+    chocolate = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite o valor unitário de cada lata de chocolate em pó: ");
+    custoC = float.Parse(Console.ReadLine());
+    totalC = custoC * chocolate;
+
+     Console.WriteLine ("Digite quantos litros de leite você comprou: ");
+    leite = float.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite o valor unitário de cada litro de leite: ");
+    custoL = float.Parse(Console.ReadLine());
+    totalL = custoL * leite;
+
+    Console.WriteLine ("Digite quantos quilos de banana você comprou: ");
+    banana = float.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite o valor do quilo da banana: ");
+    custoB = float.Parse(Console.ReadLine());
+    totalB = custoB * banana;
+
+    totalM = totalC + totalB + totalL;
+
+    //Saída da informação
+    Console.WriteLine ("Chocolate em pó - total gasto: R$" + totalC);
+    Console.WriteLine ("Leite - total gasto: R$" + totalL);
+    Console.WriteLine ("Banana - total gasto: R$" + totalB);
+    Console.WriteLine ("Total gasto no mercado: R$" + totalM);   
+  }
+}
