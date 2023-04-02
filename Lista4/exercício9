@@ -1,0 +1,45 @@
+/*9. Faça um programa para ler as coordenadas (X, Y) de uma quantidade indeterminada de pontos no sistema cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O programa será encerrado quando as duas coordenadas digitadas forem 0 (nesta situação, sair sem escrever mensagem alguma). 
+Para os dados de entrada abaixo Deve ser gerada a seguinte saída 
+2 2 primeiro quadrante 
+3 -2 quarto quadrante 
+4 7 primeiro quadrante 
+-8 -1 terceiro quadrante
+-7 1 segundo quadrante 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    int X, Y;
+
+    //Entrada, processamento dos dados e saída da informação
+    do{
+      Console.WriteLine("\n\r");
+      Console.WriteLine("Digite um ponto para X: ");
+      X = int.Parse(Console.ReadLine());
+      Console.WriteLine("Digite um ponto para Y: ");
+      Y = int.Parse(Console.ReadLine());
+
+      if(X > 0 && Y > 0){
+        Console.WriteLine("Primeiro quadrante");
+        
+      }
+
+      else if(X > 0 && Y < 0){
+        Console.WriteLine("Segundo quadrante");
+      }
+
+      else if(X < 0 && Y < 0){
+        Console.WriteLine("Terceiro quadrante");
+      }
+
+      else if(X < 0 && Y > 0){
+        Console.WriteLine("Quarto quadrante");
+      }
+    }
+   while(X != 0 && Y != 0);
+  
+  }
+}
