@@ -1,0 +1,29 @@
+/*3) Faça um programa para ler um número e imprimir uma mensagem dizendo se o mesmo é par e positivo ao mesmo tempo. (Para verificar se é par, use o operador % - módulo).*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    //Declaração de variáveis
+    int num;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite um número: ");
+    num = int.Parse(Console.ReadLine());
+
+    //Processamento de dados e saída da informação
+    if(num > 0 && num % 2 == 0){
+      Console.WriteLine("O número é par e positivo.");
+    }
+    else if(num < 0){
+      Console.WriteLine("O número é negativo.");
+    }
+    else if(num == 0){
+      Console.WriteLine("O número é 0.");
+    }
+    
+    else{
+      Console.WriteLine("O número é ímpar.");
+    }
+
+  }
+}
