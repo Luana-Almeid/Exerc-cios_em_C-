@@ -1,0 +1,27 @@
+/*7. Escreva um programa para calcular e escrever o valor final de S: 
+S = 1/1 + 2/4 + 4/16 + 5/25 + 6/36 + ... 10/100*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis 
+    float num = 1, deno = 1;
+    float S = 0; 
+
+    //Processamento dos dados
+   do
+    {
+      deno = num * num;
+      S = S + (num/deno);
+      Console.WriteLine(num + "/" + deno);
+      Console.WriteLine("S = " + S);
+      Console.WriteLine("\n\r");
+      num++;
+    }
+    while(num <= 10);
+
+    //Saída da informação
+    Console.WriteLine("S = " + Math.Round(S, 2).ToString());
+  }
+}
