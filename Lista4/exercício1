@@ -1,0 +1,84 @@
+/*1. Escreva um programa que leia 3 valores inteiros e diferentes e mostre-os em ordem
+decrescente.*/
+using System;
+
+
+class Program {
+  public static void Main (string[] args) {
+
+
+    //Declaração de variáveis
+    int valor1, valor2, valor3;
+    int maior = 0, medio = 0, menor = 0;
+
+
+   //Entrada de dados
+    Console.WriteLine("Digite o primeiro número:");
+    valor1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Digite o segundo número:");
+    valor2 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Digite o terceiro número:");
+    valor3 = int.Parse(Console.ReadLine());
+
+
+    //Processamento dos dados
+      while(valor1 == valor2 ){
+        Console.WriteLine("ERRO, digite um número diferente para o primeiro número:");
+        valor1 = int.Parse(Console.ReadLine());
+        }
+   
+    while(valor1 == valor3){
+      Console.WriteLine("ERRO, digite um número diferente para o terceiro número:");
+        valor3 = int.Parse(Console.ReadLine());
+    }
+    while(valor2 == valor3){
+       Console.WriteLine("ERRO, digite um número diferente para o segundo número:");
+        valor2 = int.Parse(Console.ReadLine());
+    }
+     
+      if(valor1 > valor2 && valor1 > valor3 && valor2 > valor3){
+        maior = valor1;
+        medio = valor2;
+        menor = valor3;
+      }
+
+
+    else if(valor1 > valor2 && valor1 > valor3 && valor3 > valor2){
+        maior = valor1;
+        medio = valor3;
+        menor = valor2;
+      }
+
+
+      else if(valor2 > valor1 && valor2 > valor3 && valor3 > valor1){
+        maior = valor2;
+        medio = valor3;
+        menor = valor1;
+      }
+
+
+      else if(valor2 > valor1 && valor2 > valor3 && valor1 > valor3){
+        maior = valor2;
+        medio = valor1;
+        menor = valor3;
+      }
+
+
+      else if(valor3 > valor1 && valor3 > valor2 && valor1 > valor2){
+        maior = valor3;
+        medio = valor1;
+        menor = valor2;
+      }
+
+
+      else if(valor3 > valor1 && valor3 > valor2 && valor2 > valor1){
+        maior = valor3;
+        medio = valor2;
+        menor = valor1;
+      }
+
+
+    //Saída da informação
+    Console.WriteLine("A ordem decrescente dos números é: " + maior + ", " + medio + ", " + menor);
+    }
+   }
