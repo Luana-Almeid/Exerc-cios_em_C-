@@ -1,0 +1,30 @@
+/*7) Em um posto de gasolina existe uma promoção de acordo com a quantidade de litros de combustível que um cliente coloca. Os prêmios são:
+
+Menos que 10 litros: Ganha um chaveiro 
+Igual ou superior a 10 litros: Ganha uma ducha  
+
+Faça um programa que leia o número de litros colocados em um automóvel e imprima uma mensagem dizendo qual o prêmio ganho. 
+
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float litros;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite o número de litros que você colocou em seu automóvel:");
+    litros = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados e saída da informação
+    if(litros < 10){
+      Console.WriteLine ("Parabéns, você ganhou um chaveiro!!");
+    }
+
+    else{
+      Console.WriteLine ("Parabéns, você ganhou uma ducha!!");
+    }
+  }
+}
