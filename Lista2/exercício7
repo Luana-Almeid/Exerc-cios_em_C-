@@ -1,0 +1,29 @@
+/*Exercício 7. Escreva um programa que leia as medidas dos lados de um retângulo, calcule e imprima a medida do seu perímetro, da diagonal e da área do retângulo.*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    
+    //Declaração de variáveis
+    float b, altura, perimetro, diagonal, area;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite a base do retângulo: ");
+    b = float.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite a altura do retângulo: ");
+    altura = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados
+    perimetro = (b * 2) + (altura * 2);
+    area = b * altura;
+    diagonal = (float)Math.Sqrt((altura * altura) + (b * b));
+
+    //Saída da informação
+    Console.WriteLine ("Perímetro: " + perimetro);
+    Console.WriteLine ("Área: " + area);
+    Console.WriteLine ("Diagonal: " + Math.Round(diagonal, 2).ToString());
+    
+
+    
+  }
+}
