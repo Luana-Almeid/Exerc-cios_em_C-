@@ -1,0 +1,28 @@
+/*6) Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor da compra for menor que R$20,00; caso contrário, o lucro será de 30%. Leia do teclado o valor do produto, calcule o valor da venda e imprima-o. 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float valor_produto, v, valor_venda;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite o valor do produto:");
+    valor_produto = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados e saída da informação
+    if(valor_produto < 20){
+      v = valor_produto * 0.45f;
+      valor_venda = v + valor_produto;
+      Console.WriteLine ("O valor da venda será de: R$" + valor_venda);
+    }
+    
+    else {
+      v = valor_produto * 0.3f;
+      valor_venda = v + valor_produto;
+      Console.WriteLine ("O valor da venda será de: R$" + valor_venda);
+    }
+  }
+}
