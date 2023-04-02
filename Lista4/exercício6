@@ -1,0 +1,40 @@
+/*6. Escrever um programa que leia 60 números e conte quantos deles estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int num, interv1 = 0, interv2 = 0, interv3 = 0, interv4 = 0, cont = 0;
+
+    do{
+      Console.WriteLine("Digite um número: ");
+      num = int.Parse(Console.ReadLine());
+      
+      if(num >= 0 && num <= 25){
+      interv1++;
+      }
+
+      else if(num >= 26 && num <= 50){
+        interv2++;
+      }
+
+      else if(num >= 51 && num <= 75){
+        interv3++;
+      }
+
+      else if(num >= 76 && num <= 100){
+        interv4++;
+      }
+
+      cont++;
+    }
+
+    while(cont < 60);
+    
+    Console.WriteLine ("Quantidade de números no intervalo de [0-25]: " + interv1);
+     Console.WriteLine ("Quantidade de números no intervalo de [26-50]: " + interv2);
+     Console.WriteLine ("Quantidade de números no intervalo de [51-75]: " + interv3);
+     Console.WriteLine ("Quantidade de números no intervalo de [76-100]: " + interv4);
+  }
+}
