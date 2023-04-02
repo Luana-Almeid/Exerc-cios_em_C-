@@ -1,0 +1,49 @@
+/*4. Deseja-se fazer uma pesquisa a respeito do consumo mensal de energia elétrica em uma determinada cidade. Para isso, são fornecidos os seguintes dados por consumidor:
+• preço do kWh; 
+• quantidade de kWh consumidos durante o mês; 
+O número de consumidores que participarão da pesquisa é igual a 80. Faça um programa que leia os dados descritos acima, calcule e imprima:
+(a) para cada consumidor, o total a pagar, 
+(b) o maior consumo verificado, 
+(c) o menor consumo verificado, 
+(d) a média geral de consumo.*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float preco_KWhora, quant_KWmes, total, maior = 
+    float.MinValue, menor = float.MaxValue, media, soma = 0;
+    int cont = 0;
+
+    //Entrada e processamento de dados
+    do{
+      Console.WriteLine ("Digite o preço do KWh: ");
+      preco_KWhora = float.Parse(Console.ReadLine());
+      
+      Console.WriteLine ("Digite a quantidade de KWh consumidos durante o mês: ");
+      quant_KWmes = float.Parse(Console.ReadLine());
+
+      soma = soma + quant_KWmes;
+      total = preco_KWhora * quant_KWmes;
+      Console.WriteLine ("Total a pagar = R$" + total + "\n\r");
+
+      if(quant_KWmes > maior){
+        maior = quant_KWmes;
+      }
+
+      else if(quant_KWmes < menor){
+        menor = quant_KWmes;
+      }
+      cont++;
+    }
+     while(cont < 80);
+
+     media = soma/80;
+
+     //Saída da informação
+     Console.WriteLine ("O maior consumo verificado: " + maior + " KWh");
+     Console.WriteLine ("O menor consumo verificado: " + menor + " KWh");
+     Console.WriteLine ("A média geral de consumo: " + media + " KWh");
+  }
+}
