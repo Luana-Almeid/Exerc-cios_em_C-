@@ -1,0 +1,35 @@
+/*2) Faça um programa que leia 2 números e imprima o quadrado do menor número e a raiz quadrada do maior número.
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float num1, n1, num2, n2;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite dois números: ");
+    num1 = float.Parse(Console.ReadLine());
+    num2 = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados e saída da informação
+    if(num1 < num2){
+      n1 = num1 * num1;
+      n2 = (float)Math.Sqrt(num2);
+      Console.WriteLine ("O quadrado de " + num1 + " é = " + n1);
+      Console.WriteLine ("A raiz quadrada de " + num2 + " é = " + n2);
+    }
+    
+    else if(num2 < num1){
+      n2 = num2 * num2;
+      n1 = (float)Math.Sqrt(num1);
+      Console.WriteLine ("O quadrado de " + num2 + " é = " + n2);
+      Console.WriteLine ("A raiz quadrada de " + num1 + " é = " + n1);
+    }
+
+    else{
+      Console.WriteLine ("Os números são iguais.");
+    }
+  }
+}
