@@ -1,0 +1,31 @@
+/* Aula 2.  - Data: 06/03/2023 
+ * Lab. ATP - Sistemas de Informação SG – 1/2023 
+ *  
+ * Aluno(a): Luana Mateus de Almeida 
+ * Profa. Michelle Nery Nascimento 
+ *  
+ *  
+ * Exerc 1.  Escreva  um  programa  no  qual  o  usuário  irá  digitar  o  raio  de  uma  circunferência  e  o  seu  programa  irá 
+calcular e mostrar na tela o perímetro, dado por: P= 2 * Pi * raio. 
+Considere Pi como 3.14 
+*/ 
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    
+    //Declaração de variáveis
+    float raio, perimetro;
+    const float Pi = 3.14f;
+
+    //Entrada de dados
+    Console.WriteLine ("Por favor, digite o raio da circunferência:");
+    raio = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados
+    perimetro = 2 * Pi * raio;
+
+    //Saída da informação
+    Console.WriteLine ("O perímetro da circunferência é = " + Math.Round(perimetro, 2).ToString());
+  }
+}
