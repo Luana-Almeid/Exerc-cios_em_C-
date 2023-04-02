@@ -1,0 +1,29 @@
+/*Exercício 6. Faça um programa que leia o número total de prestações de um consórcio, o total de prestações pagas e
+o valor atual da prestação. O programa deve calcular e mostrar o saldo devedor atual.
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    int ttPrestacoes, prestPagas;
+    float vAtual, saldoDev, ttConsorcio;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite o número total de prestações do consórcio: ");
+    ttPrestacoes = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite o número total de prestações pagas do consórcio: ");
+    prestPagas = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite o valor atual da prestação do consórcio: ");
+    vAtual = float.Parse(Console.ReadLine());
+
+    //Processamento dos dados
+    ttConsorcio = ttPrestacoes * vAtual;
+    saldoDev = ttConsorcio - (prestPagas * vAtual);
+
+    //Saída da informação
+    Console.WriteLine("O valor total do consórcio é = R$" + ttConsorcio + " e o saldo devedor é = R$" + saldoDev);
+    
+  }
+}
