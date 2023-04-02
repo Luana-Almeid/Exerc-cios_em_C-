@@ -1,0 +1,17 @@
+/*2. Faça um programa que leia números do teclado, calcule e mostre o quadrado de cada número até entrar um número múltiplo de 6 que deverá ter seu quadrado também impresso.*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int num, result;
+    do{
+      Console.WriteLine ("Digite um número: ");
+      num = int.Parse(Console.ReadLine());
+      result = num * num;
+      Console.WriteLine("Número: " + num + " Seu quadrado:" + result); 
+      Console.WriteLine("Seu quadrado: " + result);
+      Console.WriteLine("\n\r");
+      }
+    while(num % 6 != 0);
+  }
+}
