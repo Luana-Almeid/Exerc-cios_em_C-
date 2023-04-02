@@ -1,0 +1,29 @@
+/*3. Escreva um programa para ler a idade de 40 pessoas, exibir a idade da pessoa mais nova, calcular a idade média e calcular a porcentagem de pessoas com idade entre 24 e 30 anos. 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int idade, cont = 0, somaIdade = 0, maisNova = int.MaxValue, idade_porcentagem = 0; 
+    float media, porcentagem;
+    do{
+    Console.WriteLine ("Digite a idade: ");
+    idade = int.Parse(Console.ReadLine());
+    if(idade < maisNova){
+      maisNova = idade;
+    }
+    somaIdade = somaIdade + idade;
+      
+    if(idade >= 24 && idade <= 30){
+    idade_porcentagem++;
+    }
+    cont++;
+  }
+    while(cont < 40);
+    media = somaIdade / 40;
+    porcentagem = (idade_porcentagem * 100) / 40;
+    Console.WriteLine ("A idade da pessoa mais nova é = " + maisNova + " ano (s)");
+    Console.WriteLine ("A idade média é = " + Math.Round(media, 2).ToString());
+    Console.WriteLine ("A porcentagem de pessoas entre 24 e 30 anos é = " + porcentagem + "%"); 
+  }
+}
