@@ -1,0 +1,53 @@
+/*8. A secretaria de saúde de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre a idade e a quantidade de filhos de cada habitante. A secretaria deseja saber:
+
+a) média da idade da população; 
+b) média do número de filhos; 
+c) maior idade; 
+d) O percentual de pessoas acima de 60 anos. 
+O final da leitura de dados se dará com a entrada de uma idade negativa. 
+*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+  //Declaração de variáveis
+  int idade, filhos, media_idade, soma_idade = 0, quant_idade = 0;
+  int media_filhos, soma_filhos = 0, quant_filhos = 0, maior_idade = int.MinValue, percentual, soma_percentual = 0;
+
+    //Entrada e processamento de dados
+    Console.WriteLine ("Digite a idade: ");
+    idade = int.Parse(Console.ReadLine());
+
+    while(idade > 0){
+    quant_idade++;
+    Console.WriteLine ("Digite o número de filhos: ");
+    filhos = int.Parse(Console.ReadLine());
+    quant_filhos++;
+      
+    soma_idade = soma_idade + idade;
+    soma_filhos += filhos;
+
+    if(idade > maior_idade){
+      maior_idade = idade;
+    }
+
+    if(idade > 60){
+      soma_percentual++;
+    }
+
+    Console.WriteLine ("Digite a idade: ");
+    idade = int.Parse(Console.ReadLine());
+    }
+
+    media_idade = soma_idade / quant_idade;
+    media_filhos = soma_filhos / quant_filhos;
+    percentual = (soma_percentual * 100) / quant_idade;
+
+    //Saída da informação
+    Console.WriteLine ("Média da idade da população: " + media_idade + " anos");
+    Console.WriteLine ("Média do número de filhos: " + media_filhos + " filho(s)");
+    Console.WriteLine ("Maior idade: " + maior_idade + " anos");
+    Console.WriteLine ("O percentual de pessoas acima de 60 anos: " + percentual + "%");
+  }
+}
