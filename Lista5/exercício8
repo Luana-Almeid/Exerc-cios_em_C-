@@ -1,0 +1,24 @@
+/*8. Faça um programa que realize e mostre o produto entre 2 números inteiros A e B, através de somas sucessivas. Os números deverão ser lidos do teclado.*/
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    int num1, num2, mult = 0;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite um número: ");
+    num1 = int.Parse(Console.ReadLine());
+    Console.WriteLine ("Digite outro número: ");
+    num2 = int.Parse(Console.ReadLine());
+
+    //Processamento dos dados
+    for(int i = 0; i < num2; i++){
+      mult = mult + num1;
+    }
+
+    Console.WriteLine ("O produto entre " + num1 + " e " + num2 + " é = " + mult);
+  }
+}
