@@ -1,0 +1,36 @@
+/*3. Faça um programa que receba a quantidade de pessoas que assistiram a uma partida de
+futebol e mostre as mensagens de acordo com a tabela:
+menos que 1.000 – “público baixo”
+entre 1.001 e 10.000 – “público médio”
+acima de 10.000 – “público bom”*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float num_pessoas;
+
+    //Entrada de dados
+    Console.WriteLine ("Digite a quantidade de pessoas que assistiram a partida de futebol: ");
+    num_pessoas = float.Parse(Console.ReadLine());
+    Console.WriteLine("\n\r");
+    
+    //Processamento dos dados e saída da informação
+    if(num_pessoas < 1000){
+      Console.WriteLine("Público baixo");
+    }
+
+    else if(num_pessoas >= 1001 && num_pessoas <= 10000){
+      Console.WriteLine("Público médio");
+    }
+
+    else if(num_pessoas > 10000){
+      Console.WriteLine("Público bom");
+    }
+
+    else{
+      Console.WriteLine("Número inválido!");
+    }
+  }
+}
