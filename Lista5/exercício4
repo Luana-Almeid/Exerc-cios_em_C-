@@ -1,0 +1,35 @@
+/*4. Faça um programa que leia dois valores, um representando o saldo de uma pessoa e o outro representando o valor que será depositado ou retirado da conta de 
+acordo com a seguinte regra. Se o valor do saldo for maior que o segundo valor digitado, seu programa faz a retirada do menor valor do saldo. Caso contrário, 
+seu programa irá depositar este valor na conta, aumentando-o ao saldo. Mostre o saldo final.*/
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float valor_saldo, valor_digitado;
+
+    //Entrada de dados
+    Console.WriteLine ("Por favor, digite o valor do seu saldo: ");
+    valor_saldo = float.Parse(Console.ReadLine());
+    
+    Console.WriteLine ("\n\r");
+    
+    Console.WriteLine ("Por favor, digite o valor que deseja depositar/sacar: ");
+    valor_digitado = float.Parse(Console.ReadLine());
+    
+    Console.WriteLine ("\n\r");
+
+    //Processamento dos dados e saída da informação
+    if(valor_saldo > valor_digitado){
+      valor_saldo -= valor_digitado;
+      Console.WriteLine ("Saldo final = R$" + valor_saldo);
+    }
+
+    else if(valor_saldo <= valor_digitado){
+      valor_saldo += valor_digitado;
+      Console.WriteLine ("Saldo final = R$" + valor_saldo);
+    }
+  }
+}
