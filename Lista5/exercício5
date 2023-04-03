@@ -1,0 +1,39 @@
+/*5. Escreva um programa que leia o peso de um indivíduo. Considere que serão lidos os pesos de 30 pessoas. Calcule e mostre:
+
+- A média aritmética dos pesos das pessoas que possuem mais de 60 Kg
+- O valor do peso da pessoa mais pesada*/
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    float peso, media, maior_peso = float.MinValue, soma_60 = 0;
+    int cont = 0, quant_60 = 0;
+
+    //Entrada e processamento de dados
+    do{
+      Console.WriteLine ("Digite o seu peso: ");
+      peso = float.Parse(Console.ReadLine());
+
+      if(peso > 60){
+        quant_60++;
+        soma_60 += peso;
+      }
+
+      if(peso > maior_peso){
+        maior_peso = peso;
+      }
+
+      cont++;
+    }
+    while(cont < 30);
+
+    media = soma_60 / quant_60;
+
+    //Saída da informação
+    Console.WriteLine ("Média aritmética dos pesos das pessoas que possuem mais de 60 Kg = " + media + "Kg");
+    Console.WriteLine ("Valor do peso da pessoa mais pesada = " + maior_peso + "Kg");
+  }
+}
