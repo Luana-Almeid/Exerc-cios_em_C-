@@ -1,0 +1,45 @@
+/*6. Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade do conveniado considerando que todos pagam R$ 100 mais um adicional 
+conforme a seguinte tabela:
+
+1) crianças com menos de 10 anos pagam R$180;
+2) conveniados com idade entre 10 e 30 anos pagam R$150;
+3) conveniados com idade entre 40 e 60 anos pagam R$195;
+4) conveniados com mais de 60 anos pagam R$230.*/
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+
+    //Declaração de variáveis
+    int idade, valor_a_pagar = 100;
+
+    //Entrada de dados
+    Console.WriteLine ("Por favor, digite sua idade: ");
+    idade = int.Parse(Console.ReadLine());
+
+    //Processamento dos dados e saída da informação
+    if(idade < 10){
+      valor_a_pagar += 180;
+      Console.WriteLine ("Valor a ser pago = R$" + valor_a_pagar);
+    }
+
+    else if(idade >= 10 && idade <= 30){
+      valor_a_pagar += 150;
+      Console.WriteLine ("Valor a ser pago = R$" + valor_a_pagar);
+    }
+
+    else if(idade >= 40 && idade <= 60){
+      valor_a_pagar += 195;
+      Console.WriteLine ("Valor a ser pago = R$" + valor_a_pagar);
+    }
+
+    else if(idade > 60){
+      valor_a_pagar += 230;
+      Console.WriteLine ("Valor a ser pago = R$" + valor_a_pagar);
+    }
+
+    else{
+      Console.WriteLine ("Valor a ser pago = R$" + valor_a_pagar);
+    }
+  }
+}
